@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initProfileImage();
     initContactCards();
+    initModals(); // Initialize modal functionality
 });
 
 // Profile Image Loading and Error Handling
@@ -57,13 +58,20 @@ function initNavigation() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const navBrand = document.getElementById('nav-brand'); // Get the brand element
 
     // Sticky navigation on scroll
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
+            if (navBrand) {
+                navBrand.classList.add('visible');
+            }
         } else {
             navbar.classList.remove('scrolled');
+            if (navBrand) {
+                navBrand.classList.remove('visible');
+            }
         }
     });
 
@@ -306,6 +314,48 @@ function initTypingAnimation() {
     // Start typing animation after a delay
     setTimeout(typeWriter, 2000);
 }
+
+// Project Modal Functionality
+function initModals() {
+    const openModalButtons = document.querySelectorAll('[data-modal-target]');
+    const closeModalButtons = document.querySelectorAll('.modal-close-btn');
+    const overlays = document.querySelectorAll('.modal-overlay');
+
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget);
+            openModal(modal);
+        });
+    });
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeModal(overlay);
+            }
+        });
+    });
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal-overlay');
+            closeModal(modal);
+        });
+    });
+
+    function openModal(modal) {
+        if (modal == null) return;
+        modal.classList.add('active');
+        document.body.classList.add('modal-active');
+    }
+
+    function closeModal(modal) {
+        if (modal == null) return;
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-active');
+    }
+}
+
 
 // Enhanced Interactive Features
 document.addEventListener('DOMContentLoaded', function() {
