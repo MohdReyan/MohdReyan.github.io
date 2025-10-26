@@ -15,11 +15,11 @@
             <div class="nav-brand" id="nav-brand">
                 <span>Reyan Ansari</span>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#hero" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -245,7 +245,7 @@
                         <h3>AxisLink</h3>
                         <span class="project-status">In Development</span>
                     </div>
-                    <p class="project-description">An intelligent, self-aligning antenna system that acts as a "dynamic signal spotlight" to solve unreliable wireless connections.</p>
+                    <p class="project-description">A smart antenna system that automatically tracks devices, creating a focused data beam to eliminate signal drops and maximize connection stability.</p>
                     <div class="project-tech">
                         <span class="tech-tag">ESP32</span>
                         <span class="tech-tag">ESP-NOW</span>
@@ -264,7 +264,7 @@
                         <h3>Temperature Sensor with LCD Display</h3>
                         <span class="project-duration">Mar 2024 - Apr 2024</span>
                     </div>
-                    <p class="project-description">A foundational project to measure and display ambient temperature in real-time using an Arduino and an LM35 sensor.</p>
+                    <p class="project-description">Developed a real-time environmental monitor to accurately measure and display ambient temperature on a dedicated LCD screen.</p>
                     <div class="project-tech">
                         <span class="tech-tag">LM35</span>
                         <span class="tech-tag">Arduino</span>
@@ -282,7 +282,7 @@
                         <h3>Sound Detection Alarm System</h3>
                         <span class="project-duration">Oct 2023</span>
                     </div>
-                    <p class="project-description">A simple circuit that detects sound levels and triggers an audible and visual alarm if the noise exceeds a set threshold.</p>
+                    <p class="project-description">Engineered a sound-activated alert system that triggers an alarm when noise levels surpass a user-defined threshold.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Sound Sensor</span>
                         <span class="tech-tag">Arduino</span>
@@ -378,28 +378,37 @@
         </div>
     </section>
 
-    <section id="interests" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Interests & Hobbies</h2>
-            <div class="interests-grid fade-in">
-                <div class="interest-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Tech Enthusiast</h3>
-                    <p>Passionate about emerging technologies and innovations</p>
+<section id="interests" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Interests & Hobbies</h2>
+        <div class="interests-grid fade-in">
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-microchip"></i>
                 </div>
-                <div class="interest-card">
-                    <i class="fas fa-video"></i>
-                    <h3>Anime</h3>
-                    <p>Enjoys Japanese animation and culture</p>
+                <h3>Tech Enthusiast</h3>
+                <p>Following emerging<br>tech and AI trends.</p>
+            </div>
+
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-play"></i>
                 </div>
-                <div class="interest-card">
-                    <i class="fas fa-chess"></i>
-                    <h3>Chess</h3>
-                    <p>Strategic board game player</p>
+                <h3>Anime</h3>
+                <p>Analyzing direction<br>& artistic style.</p>
+            </div>
+
+            <div class="interest-card">
+                <div class="interest-icon chess-icon">
+                    <i class="fas fa-chess-king white-piece"></i>
+                    <i class="fas fa-chess-pawn black-piece"></i>
                 </div>
+                <h3>Chess</h3>
+                <p>Strategic board game<br>player.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="section section-contact">
         <div class="container">
@@ -430,10 +439,10 @@
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="contact-info">
-                            <h4>WhatsApp</h4>
-                            <p>Chat with me directly</p>
+                            <h4>Your Next Hire</h4>
+                            <p>Passionate ECE engineer ready to innovate</p>
                             <a href="https://wa.me/qr/BLTPSFXHTKKZA1" target="_blank" class="contact-link">
-                                +91 8287498910
+                            Contact Me on WhatsApp    
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
@@ -474,10 +483,6 @@
     <footer class="footer">
         <div class="container">
             <p>© 2024 Mohd Reyan Ansari. All rights reserved.</p>
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/mohd-reyan-ansari-88315a238/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/MohdReyan" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
         </div>
     </footer>
 

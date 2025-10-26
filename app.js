@@ -79,15 +79,17 @@ function initNavigation() {
     if (navToggle) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            navToggle.setAttribute('aria-expanded', isExpanded);
             
             // Animate hamburger menu
             const spans = navToggle.querySelectorAll('span');
             spans.forEach((span, index) => {
-                span.style.transform = navMenu.classList.contains('active') 
+                span.style.transform = isExpanded 
                     ? `rotate(${index === 0 ? '45deg' : index === 1 ? '0deg' : '-45deg'})`
                     : 'rotate(0deg)';
                 if (index === 1) {
-                    span.style.opacity = navMenu.classList.contains('active') ? '0' : '1';
+                    span.style.opacity = isExpanded ? '0' : '1';
                 }
             });
         });
@@ -98,6 +100,7 @@ function initNavigation() {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
             if (navToggle) {
+                navToggle.setAttribute('aria-expanded', 'false');
                 const spans = navToggle.querySelectorAll('span');
                 spans.forEach((span, index) => {
                     span.style.transform = 'rotate(0deg)';
@@ -577,6 +580,7 @@ document.addEventListener('keydown', function(e) {
         if (navMenu && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
             if (navToggle) {
+                navToggle.setAttribute('aria-expanded', 'false');
                 const spans = navToggle.querySelectorAll('span');
                 spans.forEach((span, index) => {
                     span.style.transform = 'rotate(0deg)';

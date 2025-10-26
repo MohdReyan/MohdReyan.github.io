@@ -1,17 +1,19 @@
-/* Root Variables */
+/* Root Variables - CLASSY COLOR SCHEME */
 :root {
-  --charcoal-gray: rgb(54,69,79);
-  --emerald-green: rgb(80,200,120);
-  --dark-gray: rgb(51,51,51);
-  --light-gray: rgb(176,176,176);
-  --very-light-gray: rgb(247,247,247);
+  --charcoal-gray: rgb(44, 62, 80);     /* Deep navy blue */
+  --primary-color: rgb(52, 73, 94);     /* Sophisticated blue */
+  --accent-color: rgb(189, 195, 199);   /* Silver accent */
+  --gold-accent: rgb(212, 175, 55);     /* Classic gold */
+  --dark-gray: rgb(52, 73, 94);         /* Dark blue-gray */
+  --light-gray: rgb(149, 165, 166);     /* Medium gray */
+  --very-light-gray: rgb(236, 240, 241); /* Light background */
   --white: #ffffff;
-  --black: #000000;
-  --shadow: 0 10px 30px rgba(0,0,0,0.1);
-  --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+  --black: #2c3e50;
+  --shadow: 0 10px 30px rgba(44, 62, 80, 0.1);
+  --shadow-hover: 0 20px 40px rgba(44, 62, 80, 0.15);
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --card-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  --card-shadow-hover: 0 15px 40px rgba(0,0,0,0.2);
+  --card-shadow: 0 8px 25px rgba(44, 62, 80, 0.1);
+  --card-shadow-hover: 0 15px 40px rgba(44, 62, 80, 0.2);
 }
 
 /* Base Styles */
@@ -106,7 +108,7 @@ body.modal-active {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background: var(--emerald-green);
+  background: var(--gold-accent);
   transition: var(--transition);
 }
 
@@ -132,7 +134,7 @@ body.modal-active {
 /* Enhanced Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, var(--charcoal-gray) 0%, var(--dark-gray) 50%, rgba(54,69,79,0.9) 100%);
+  background: linear-gradient(135deg, var(--charcoal-gray) 0%, var(--dark-gray) 50%, rgba(44, 62, 80, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,8 +152,8 @@ body.modal-active {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(80,200,120,0.15) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(80,200,120,0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 30% 70%, rgba(189, 195, 199, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(189, 195, 199, 0.1) 0%, transparent 50%);
   z-index: -1;
 }
 
@@ -167,7 +169,7 @@ body.modal-active {
 .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(80,200,120,0.1);
+  background: rgba(189, 195, 199, 0.1); /* Silver circles */
   animation: float 6s ease-in-out infinite;
 }
 
@@ -222,13 +224,13 @@ body.modal-active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--emerald-green), rgb(60,180,100));
+  background: linear-gradient(135deg, var(--primary-color), rgb(44, 62, 80));
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 20px 50px rgba(80,200,120,0.3), 
+  box-shadow: 0 20px 50px rgba(52, 73, 94, 0.3), 
               0 10px 25px rgba(0,0,0,0.2),
               inset 0 0 0 3px rgba(255,255,255,0.1);
   transition: var(--transition);
@@ -242,7 +244,7 @@ body.modal-active {
   left: -8px;
   right: -8px;
   bottom: -8px;
-  background: linear-gradient(135deg, rgba(80,200,120,0.4), rgba(60,180,100,0.4));
+  background: linear-gradient(135deg, rgba(52, 73, 94, 0.4), rgba(44, 62, 80, 0.4));
   border-radius: 50%;
   z-index: -1;
   opacity: 0;
@@ -251,7 +253,7 @@ body.modal-active {
 
 .profile-image-container:hover {
   transform: translateY(-15px) scale(1.08);
-  box-shadow: 0 30px 60px rgba(80,200,120,0.4), 
+  box-shadow: 0 30px 60px rgba(52, 73, 94, 0.4), 
               0 15px 35px rgba(0,0,0,0.3),
               inset 0 0 0 3px rgba(255,255,255,0.2);
 }
@@ -309,7 +311,7 @@ body.modal-active {
 
 .hero-subtitle {
   font-size: 1.6rem;
-  color: var(--emerald-green);
+  color: var(--accent-color); /* Silver instead of green */
   margin-bottom: 1rem;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 1s;
@@ -377,27 +379,26 @@ body.modal-active {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Enhanced Buttons */
 .btn-primary {
-  background: linear-gradient(135deg, var(--emerald-green), rgb(60,180,100));
+  background: linear-gradient(135deg, var(--primary-color), rgb(44, 62, 80));
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, rgb(60,180,100), var(--emerald-green));
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(80,200,120,0.3);
+  background: linear-gradient(135deg, rgb(44, 62, 80), var(--primary-color));
+  box-shadow: 0 8px 25px rgba(52, 73, 94, 0.3);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid var(--emerald-green);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background: var(--emerald-green);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(80,200,120,0.3);
+  background: var(--accent-color);
+  color: var(--charcoal-gray);
+  box-shadow: 0 8px 25px rgba(189, 195, 199, 0.3);
 }
 
 /* Sections */
@@ -425,8 +426,8 @@ body.modal-active {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(80,200,120,0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(80,200,120,0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 80%, rgba(189, 195, 199, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(189, 195, 199, 0.1) 0%, transparent 50%);
   z-index: -1;
 }
 
@@ -447,7 +448,7 @@ body.modal-active {
   position: absolute;
   width: 60px;
   height: 4px;
-  background: var(--emerald-green);
+  background: var(--gold-accent);
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
@@ -492,7 +493,7 @@ body.modal-active {
 }
 
 .highlight-item i {
-  color: var(--emerald-green);
+  color: var(--gold-accent);
   font-size: 1.2rem;
 }
 
@@ -522,7 +523,7 @@ body.modal-active {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--emerald-green);
+  color: var(--gold-accent);
   margin-bottom: 0.5rem;
 }
 
@@ -587,7 +588,7 @@ body.modal-active {
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--emerald-green), rgb(60,180,100));
+  background: linear-gradient(90deg, var(--primary-color), rgb(44, 62, 80));
   border-radius: 4px;
   transition: width 1s ease-in-out;
   width: 0;
@@ -598,6 +599,7 @@ body.modal-active {
   color: var(--light-gray);
 }
 
+/* Projects Section */
 /* Projects Section */
 .projects-grid {
   display: grid;
@@ -622,7 +624,7 @@ body.modal-active {
 }
 
 .project-card.featured {
-  background: linear-gradient(135deg, var(--emerald-green), rgb(60,180,100));
+  background: linear-gradient(135deg, var(--primary-color), var(--charcoal-gray));
   color: var(--white);
 }
 
@@ -642,7 +644,7 @@ body.modal-active {
 
 .project-status,
 .project-duration {
-  background: var(--emerald-green);
+  background: var(--primary-color);
   color: var(--white);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -652,11 +654,17 @@ body.modal-active {
 
 .project-card.featured .project-status {
   background: rgba(255,255,255,0.2);
+  color: var(--white);
 }
 
 .project-description {
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.project-card.featured .project-description {
+  color: rgba(255,255,255,0.9);
 }
 
 .project-tech {
@@ -667,8 +675,8 @@ body.modal-active {
 }
 
 .tech-tag {
-  background: rgba(80,200,120,0.1);
-  color: var(--emerald-green);
+  background: rgba(52, 73, 94, 0.1);
+  color: var(--primary-color);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -678,6 +686,7 @@ body.modal-active {
 .project-card.featured .tech-tag {
   background: rgba(255,255,255,0.2);
   color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .project-overlay {
@@ -703,17 +712,18 @@ body.modal-active {
   color: var(--white);
   text-decoration: none;
   padding: 1rem 2rem;
-  border: 2px solid var(--emerald-green);
+  border: 2px solid var(--accent-color);
   border-radius: 25px;
   transition: var(--transition);
-  background-color: transparent; /* Ensure button style consistency */
+  background-color: transparent;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .project-link:hover {
-  background: var(--emerald-green);
+  background: var(--accent-color);
+  color: var(--charcoal-gray);
 }
 
 /* Education Section */
@@ -730,7 +740,7 @@ body.modal-active {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--emerald-green);
+  background: var(--gold-accent);
 }
 
 .timeline-item {
@@ -745,7 +755,7 @@ body.modal-active {
   top: 0;
   width: 20px;
   height: 20px;
-  background: var(--emerald-green);
+  background: var(--gold-accent);
   border-radius: 50%;
   border: 4px solid var(--white);
   box-shadow: var(--shadow);
@@ -773,7 +783,7 @@ body.modal-active {
 }
 
 .institution {
-  color: var(--emerald-green);
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -873,7 +883,7 @@ body.modal-active {
 
 .cert-card i {
   font-size: 3rem;
-  color: var(--emerald-green);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
@@ -890,36 +900,59 @@ body.modal-active {
 
 /* Interests Section */
 .interests-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .interest-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: var(--transition);
-  position: relative;
-  z-index: 1;
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(189, 195, 199, 0.3);
 }
 
 .interest-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
+}
+
+.interest-icon {
+    margin-bottom: 1.5rem;
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-icon i {
+    font-size: 3rem;
+    transition: var(--transition);
 }
 
 .interest-card i {
   font-size: 3rem;
-  color: var(--emerald-green);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
 .interest-card h3 {
   color: var(--charcoal-gray);
   margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.interest-card p {
+    color: var(--light-gray);
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* Enhanced Contact Section */
@@ -934,7 +967,7 @@ body.modal-active {
 }
 
 .contact-intro h3 {
-  color: var(--emerald-green);
+  color: var(--accent-color);
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -981,7 +1014,7 @@ body.modal-active {
 .contact-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  border-color: var(--emerald-green);
+  border-color: var(--gold-accent);
 }
 
 .contact-card:hover::before {
@@ -991,7 +1024,7 @@ body.modal-active {
 .contact-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--emerald-green), rgb(60,180,100));
+  background: linear-gradient(135deg, var(--primary-color), rgb(44, 62, 80));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1030,7 +1063,7 @@ body.modal-active {
 }
 
 .contact-link {
-  color: var(--emerald-green);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -1041,8 +1074,8 @@ body.modal-active {
 }
 
 .contact-link:hover {
-  color: rgb(60,180,100);
-  text-shadow: 0 0 10px rgba(80,200,120,0.5);
+  color: var(--gold-accent);
+  text-shadow: 0 0 10px rgba(189, 195, 199, 0.5);
 }
 
 .contact-link i {
@@ -1054,7 +1087,7 @@ body.modal-active {
 }
 
 .social-section h4 {
-  color: var(--emerald-green);
+  color: var(--gold-accent);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -1138,7 +1171,7 @@ body.modal-active {
 }
 
 .footer-socials a:hover {
-  color: var(--emerald-green);
+  color: var(--gold-accent);
   transform: translateY(-3px);
 }
 
@@ -1369,6 +1402,8 @@ body.modal-active {
   .interest-card,
   .project-card {
     padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
   }
 
   .contact-card {
@@ -1497,3 +1532,230 @@ body.modal-active {
 .modal-text p:last-child {
     margin-bottom: 0;
 }
+/* ===== INTEREST CARD ANIMATIONS - OPTION 1 ===== */
+/* Add this at the END of your style.css file */
+
+.interest-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+/* Tech Enthusiast - Sophisticated Blue */
+.interest-card:nth-child(1) .interest-icon i {
+    color: var(--primary-color);
+    animation: techPulse 3s ease-in-out infinite;
+}
+
+@keyframes techPulse {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        color: var(--primary-color);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        color: #3498db;
+    }
+}
+
+/* Anime Icon */
+.interest-card:nth-child(2) .interest-icon i {
+    color: #9b59b6;
+    animation: animeFloat 4s ease-in-out infinite;
+}
+
+@keyframes animeFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        color: #9b59b6;
+    }
+    33% {
+        transform: translateY(-5px) scale(1.05);
+        color: #8e44ad;
+    }
+    66% {
+        transform: translateY(3px) scale(0.95);
+        color: #af7ac5;
+    }
+}
+
+/* Chess Icon Container */
+.chess-icon {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+}
+
+.chess-icon .white-piece,
+.chess-icon .black-piece {
+    position: absolute;
+    font-size: 2.5rem;
+    transition: var(--transition);
+}
+
+.chess-icon .white-piece {
+    left: 20px;
+    color: #7f8c8d; /* Changed to medium gray - much more visible */
+    text-shadow: 0 0 10px rgba(127, 140, 141, 0.6);
+    animation: whiteGlow 3s ease-in-out infinite;
+}
+
+.chess-icon .black-piece {
+    right: 20px;
+    color: #2c3e50;
+    text-shadow: 0 0 10px rgba(44, 62, 80, 0.6);
+    animation: blackGlow 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes whiteGlow {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+        color: #7f8c8d;
+        text-shadow: 0 0 10px rgba(127, 140, 141, 0.6);
+    }
+    50% {
+        transform: scale(1.15) translateY(-3px);
+        color: #95a5a6; /* Lighter gray when glowing */
+        text-shadow: 0 0 20px rgba(127, 140, 141, 0.9),
+                     0 0 30px rgba(127, 140, 141, 0.7);
+    }
+}
+
+@keyframes blackGlow {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+        color: #2c3e50;
+        text-shadow: 0 0 10px rgba(44, 62, 80, 0.6);
+    }
+    50% {
+        transform: scale(1.15) translateY(-3px);
+        color: #34495e; /* Slightly lighter black when glowing */
+        text-shadow: 0 0 20px rgba(44, 62, 80, 0.9),
+                     0 0 30px rgba(44, 62, 80, 0.7);
+    }
+}
+
+/* Enhanced Hover Effects for Chess */
+.interest-card:hover .chess-icon .white-piece {
+    animation-duration: 1s;
+    color: #95a5a6;
+    text-shadow: 0 0 25px rgba(127, 140, 141, 1),
+                 0 0 40px rgba(127, 140, 141, 0.8);
+}
+
+.interest-card:hover .chess-icon .black-piece {
+    animation-duration: 1s;
+    color: #2c3e50;
+    text-shadow: 0 0 25px rgba(44, 62, 80, 1),
+                 0 0 40px rgba(44, 62, 80, 0.8);
+}
+.interest-card:nth-child(1):hover .interest-icon i {
+    color: #2980b9;
+}
+
+.interest-card:nth-child(2):hover .interest-icon i {
+    color: #8e44ad;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .interest-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .chess-icon {
+        width: 90px;
+        height: 50px;
+    }
+    
+    .chess-icon .white-piece,
+    .chess-icon .black-piece {
+        font-size: 2rem;
+    }
+}
+ /* ===== CONTACT CARD GLOW EFFECTS - SPECIFIC COLORS ===== */
+
+/* Email Card - Blue Glow (#1A73E8) */
+.contact-card:nth-child(1):hover {
+    border-color: #1A73E8 !important;
+    box-shadow: 0 20px 40px rgba(26, 115, 232, 0.25) !important;
+}
+
+.contact-card:nth-child(1):hover .contact-icon {
+    background: linear-gradient(135deg, #1A73E8, #1565C0) !important;
+    box-shadow: 0 10px 25px rgba(26, 115, 232, 0.35) !important;
+}
+
+.contact-card:nth-child(1):hover .contact-link {
+    color: #1A73E8 !important;
+    text-shadow: 0 0 12px rgba(26, 115, 232, 0.6) !important;
+}
+
+.contact-card:nth-child(1) .contact-icon {
+    background: linear-gradient(135deg, #1A73E8, #1565C0) !important;
+}
+
+/* WhatsApp Card - Green Glow (#25D366) */
+.contact-card:nth-child(2):hover {
+    border-color: #25D366 !important;
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.25) !important;
+}
+
+.contact-card:nth-child(2):hover .contact-icon {
+    background: linear-gradient(135deg, #25D366, #1DA851) !important;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35) !important;
+}
+
+.contact-card:nth-child(2):hover .contact-link {
+    color: #25D366 !important;
+    text-shadow: 0 0 12px rgba(37, 211, 102, 0.6) !important;
+}
+
+.contact-card:nth-child(2) .contact-icon {
+    background: linear-gradient(135deg, #25D366, #1DA851) !important;
+}
+
+/* Location Card - Red Glow (#EA4335) */
+.contact-card:nth-child(3):hover {
+    border-color: #EA4335 !important;
+    box-shadow: 0 20px 40px rgba(234, 67, 53, 0.25) !important;
+}
+
+.contact-card:nth-child(3):hover .contact-icon {
+    background: linear-gradient(135deg, #EA4335, #D32F2F) !important;
+    box-shadow: 0 10px 25px rgba(234, 67, 53, 0.35) !important;
+}
+
+.contact-card:nth-child(3):hover .contact-link {
+    color: #EA4335 !important;
+    text-shadow: 0 0 12px rgba(234, 67, 53, 0.6) !important;
+}
+
+.contact-card:nth-child(3) .contact-icon {
+    background: linear-gradient(135deg, #EA4335, #D32F2F) !important;
+}
+
+/* Note: The footer HTML was accidentally placed in this CSS file and causes a parse error.
+   Move the following markup into your HTML (e.g., index.html) where appropriate:
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2024 Mohd Reyan Ansari. All rights reserved.</p>
+        <!-- Social media links removed from here -->
+    </div>
+</footer>
+
+   This CSS file should contain only styles. */
